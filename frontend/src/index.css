@@ -308,8 +308,9 @@ input:focus {
 .chat-bubble-custom-receive {
   position: relative;
   display: inline-block;
-  padding: 0.5rem;
+  padding-inline: calc(0.25rem * 4);
   border-radius: 0px 30px 30px;
+  padding-block: calc(0.25rem * 2);
   background-color: rgb(78, 84, 99);
   color: white;
   max-width: 90%;
@@ -329,4 +330,47 @@ input:focus {
 
 .bg-blue-500 {
   background-color: rgb(59 130 246);
+}
+
+.divide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  white-space: nowrap;
+  &:before,
+  &:after {
+    content: "";
+    height: calc(0.25rem /* 4px */ * 0.5);
+    width: 100%;
+    flex-grow: 1;
+    background-color: color-mix(
+      in oklab,
+      var(--color-base-content) /* var(--color-base-content) */ 10%,
+      transparent
+    );
+  }
+  @media print {
+    &:before,
+    &:after {
+      border: 0.5px solid;
+    }
+  }
+  &:not(:empty) {
+    gap: calc(0.25rem /* 4px */ * 4);
+  }
+}
+
+.send-right {
+  right: -20px;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.text-gray {
+  color: rgb(107 114 128);
+}
+
+.text-white {
+  color: white;
 }

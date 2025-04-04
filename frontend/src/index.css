@@ -14,13 +14,12 @@ body {
 }
 
 .glassmorphism {
-  background: rgba(112, 112, 112, 0.267);
+  background: rgba(180, 180, 180, 0.26);
   padding-inline: 60px;
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100%;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
 }
 

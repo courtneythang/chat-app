@@ -45,6 +45,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          <br />
           <Link to="/signup" className="flex justify-center hover:underline">
             {"Don't"} have an account?{" "}
           </Link>
@@ -57,6 +58,7 @@ const Login = () => {
               )}
             </button>
           </div>
+          <br />
         </form>
       </div>
     </div>
